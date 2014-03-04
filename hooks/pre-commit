@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[[ -f package.json ]] && npm test
+
+# vim: ft=sh
