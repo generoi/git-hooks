@@ -2,7 +2,6 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" && pwd  )"
 
-GIT_ROOT="$(pwd -P 2>/dev/null || command pwd)"
 GIT_ROOT=".."
 while [ ! -e "$GIT_ROOT/.git" ]; do
   GIT_ROOT="${GIT_ROOT}/.."
