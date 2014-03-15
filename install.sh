@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" && pwd  )"
 
-GIT_ROOT=".."
+GIT_ROOT="$DIR/.."
 while [ ! -e "$GIT_ROOT/.git" ]; do
   GIT_ROOT="${GIT_ROOT}/.."
   [[ "$(readlink -f $GIT_ROOT)" == "/" ]] && exit 1
