@@ -1,5 +1,8 @@
 #!/bin/bash
 
-[[ -f package.json ]] && npm test
+# Exit truthy if npm isnt used.
+[[ ! -f package.json ]] && exit 0
+
+npm test
 
 # vim: ft=sh
