@@ -3,6 +3,7 @@
 [[ -f .gitmodules ]] && git submodule update --init
 [[ -f package.json ]] && npm install
 [[ -f bower.json ]] && bower install | xargs echo
+[[ -f package.json ]] && npm run | grep -q '^  update' && npm run update
 
 exit 0
 
