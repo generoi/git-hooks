@@ -1,0 +1,17 @@
+{
+  "name": "generoi/git-hooks",
+  "license": "MIT",
+  "description": "Some useful git hooks",
+  "homepage": "https://github.com/generoi/git-hooks",
+  "authors": [
+    {
+      "name": "Oskar Schöldström",
+      "email": "public@oxy.fi"
+    }
+  ],
+  "keywords": [],
+  "support": {
+    "issues": "https://github.com/generoi/git-hooks/issues"
+  },
+  "require": {}
+}
