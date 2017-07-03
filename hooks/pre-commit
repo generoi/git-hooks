@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# Exit truthy if npm isnt used.
-[[ ! -f package.json ]] && exit 0
+# Exit immediately on error.
+set -e
 
-npm test
+[[ -f composer.json ]] && composer test
+[[ -f package.json ]] && npm test
+
+exit 0
 
 # vim: ft=sh

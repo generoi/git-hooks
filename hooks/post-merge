@@ -1,9 +1,15 @@
 #!/bin/bash
 
 [[ -f .gitmodules ]] && git submodule update --init
-[[ -f package.json ]] && npm install
+[[ -f composer.json ]] && composer install
+
+if [[ -f yarn.lock ]]; then
+  yarn
+elif [[ -f package.json ]]; then
+  npm install
+fi
+
 [[ -f bower.json ]] && bower install | xargs echo
-[[ -f package.json ]] && npm run | grep -q '^  update' && npm run update
 
 exit 0
 
