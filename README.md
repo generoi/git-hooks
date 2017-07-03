@@ -1,12 +1,18 @@
-git-hooks
-=========
+# git-hooks
 
-Some useful git hooks
+Some useful git hooks.
 
-### pre-commit
+## Installation
 
-Make sure tests pass with `npm test`
+    git config core.hooksPath "vendor/generoi/git-hooks/hooks"
 
-### post-merge
+## Features
 
-Update all third party code (bower, npm, git submodules)
+- `pre-commit`: Ensure all tests pass
+  - if `composer.json` is available: `composer test`
+  - if `package.json` is available: `npm test`
+- `post-merge`: Update all third party dependencies
+  - if `composer.json` is available: `composer install`
+  - if `yarn.lock` is available: `yarn`
+  - if `package.json` is available: `npm install`
+  - if `bower.json` is available: `bower install`
